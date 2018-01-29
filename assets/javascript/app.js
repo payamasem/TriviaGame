@@ -18,7 +18,7 @@ $("body").on("click", ".start-button", function(event){
 });
 
 $("body").on("click", ".answer", function(event){
-	//answeredQuestion = true;
+	
 	selectedAnswer = $(this).text();
 	if(selectedAnswer === correctAnswers[questionCounter]) {
 	
@@ -42,21 +42,21 @@ function incorrect() {
 	incorrectTally++;
 	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>You ran out of time!  The correct answer was: " + correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='img/x.png'>";
 	$(".questionArea").html(gameHTML);
-	setTimeout(decrement, 5000); 
+	setTimeout(decrement, 5500); 
 }
 
 function correct() {
 	correctTally++;
 	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Correct! The answer is: " + correctAnswers[questionCounter] + "</p>" + imageArray[questionCounter];
 	$(".questionArea").html(gameHTML);
-	setTimeout(decrement, 5000); 
+	setTimeout(decrement, 5500); 
 }
 
 function incorrect() {
 	incorrectTally++;
-	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! You suck! The correct answer is: "+ correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='assets/images/wrong.gif'>";
+	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Oops, sorry but that's wrong! The correct answer is: "+ correctAnswers[questionCounter] + "</p>" + wrongimageArray[questionCounter];
 	$(".questionArea").html(gameHTML);
-	setTimeout(decrement, 5000);
+	setTimeout(decrement, 5500);
 }
 
 function next() {
@@ -65,7 +65,7 @@ function next() {
 }
 
 function decrement() {
-	if (questionCounter < 2) {
+	if (questionCounter < 4) {
 	questionCounter++;
 	next();
 	counter = 30;
@@ -108,10 +108,11 @@ function resetGame() {
 var startScreen;
 var gameHTML;
 var counter = 30;
-var questionArray = ["Who was the first twitter user to reach 20 million followers?", "Which of the following is the longest running American animated TV show?", "Every year, over 9,000 people injure themselves with what (apparently) harmless object?"];
-var answerArray = [["Kim Kardashian", "Justin Bieber", "Lady Gaga", "Ellen Degeneres"], ["Spongebob","The Simpsons","Rugrats","Family Guy"], ["Toothpick", "Pencil", "Paperclip", "Butter Knife"]];
-var imageArray = ["<img class='center-block img-right' src='assets/images/gaga.gif'>", "<img class='center-block img-right' src='assets/images/simpsons.gif'>", "<img class='center-block img-right' src='assets/images/toothpick.gif'>"];
-var correctAnswers = ["C. Lady Gaga", "B. The Simpsons", "A. Toothpick"];
+var questionArray = ["1. Who was the first twitter user to reach 20 million followers?", "2. Which of the following is the longest running American animated TV show?", "3. Every year, over 9,000 people injure themselves with what (apparently) harmless object?", "4. When was the social media website Myspace created?", "5. What is the largest freshwater lake in the world?"];
+var answerArray = [["Kim Kardashian", "Justin Bieber", "Lady Gaga", "Ellen Degeneres"], ["Spongebob","The Simpsons","Rugrats","Family Guy"], ["Toothpick", "Pencil", "Paperclip", "Butter Knife"], ["2001", "2006", "2003", "2000"], ["Lake Erie", "Lake Victoria", "Caspian Sea", "Lake Michigan"]];
+var imageArray = ["<img class='center-block img-right' src='assets/images/gaga.gif'>", "<img class='center-block img-right' src='assets/images/simpsons.gif'>", "<img class='center-block img-right' src='assets/images/toothpick.gif'>", "<img class='center-block img-right' src='assets/images/myspace.gif'>", "<img class='center-block img-right' src='assets/images/lake.gif'>"];
+var wrongimageArray = ["<img class='center-block img-right' src='assets/images/wrong.gif'>", "<img class='center-block img-right' src='assets/images/wrong1.gif'>", "<img class='center-block img-right' src='assets/images/wrong0.gif'>", "<img class='center-block img-right' src='assets/images/wrong2.gif'>", "<img class='center-block img-right' src='assets/images/wrong3.gif'>"]
+var correctAnswers = ["C. Lady Gaga", "B. The Simpsons", "A. Toothpick", "C. 2003", "A. Lake Erie"];
 var questionCounter = 0;
 var selecterAnswer;
 var theClock;
