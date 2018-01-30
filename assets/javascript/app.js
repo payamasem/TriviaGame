@@ -65,7 +65,7 @@ function next() {
 }
 
 function decrement() {
-	if (questionCounter < 4) {
+	if (questionCounter < 9) {
 	questionCounter++;
 	next();
 	counter = 30;
@@ -108,11 +108,11 @@ function resetGame() {
 var startScreen;
 var gameHTML;
 var counter = 30;
-var questionArray = ["1. Who was the first twitter user to reach 20 million followers?", "2. Which of the following is the longest running American animated TV show?", "3. Every year, over 9,000 people injure themselves with what (apparently) harmless object?", "4. When was the social media website Myspace created?", "5. What is the largest freshwater lake in the world?"];
-var answerArray = [["Kim Kardashian", "Justin Bieber", "Lady Gaga", "Ellen Degeneres"], ["Spongebob","The Simpsons","Rugrats","Family Guy"], ["Toothpick", "Pencil", "Paperclip", "Butter Knife"], ["2001", "2006", "2003", "2000"], ["Lake Erie", "Lake Victoria", "Caspian Sea", "Lake Michigan"]];
-var imageArray = ["<img class='center-block img-right' src='assets/images/gaga.gif'>", "<img class='center-block img-right' src='assets/images/simpsons.gif'>", "<img class='center-block img-right' src='assets/images/toothpick.gif'>", "<img class='center-block img-right' src='assets/images/myspace.gif'>", "<img class='center-block img-right' src='assets/images/lake.gif'>"];
-var wrongimageArray = ["<img class='center-block img-right' src='assets/images/wrong.gif'>", "<img class='center-block img-right' src='assets/images/wrong1.gif'>", "<img class='center-block img-right' src='assets/images/wrong0.gif'>", "<img class='center-block img-right' src='assets/images/wrong2.gif'>", "<img class='center-block img-right' src='assets/images/wrong3.gif'>"]
-var correctAnswers = ["C. Lady Gaga", "B. The Simpsons", "A. Toothpick", "C. 2003", "A. Lake Erie"];
+var questionArray = ["1. Who was the first twitter user to reach 20 million followers?", "2. Which of the following is the longest running American animated TV show?", "3. Every year, over 9,000 people injure themselves with what (apparently) harmless object?", "4. When was the social media website Myspace created?", "5. What is the largest freshwater lake in the world?", "6. Fill in the blank: Donald Trump is the ___ president of the United States.", "7. Fill in the blank: UC Berkeley, the flagship campus of the University of California system, was founded in the year _____.", "8. When was the social media site Facebook founded?", "9. When was the social media site Twitter founded?", "10. When was Instagram's first launch?"];
+var answerArray = [["Kim Kardashian", "Justin Bieber", "Lady Gaga", "Ellen Degeneres"], ["Spongebob","The Simpsons","Rugrats","Family Guy"], ["Toothpick", "Pencil", "Paperclip", "Butter Knife"], ["2001", "2006", "2003", "2000"], ["Lake Erie", "Lake Victoria", "Caspian Sea", "Lake Michigan"], ["43rd", "41st", "45th", "47th"], ["1901", "1872", "1891", "1868"], ["2001", "2005", "2002", "2004"], ["2005", "2007", "2004", "2006"], ["2008", "2010", "2007", "2009"]];
+var imageArray = ["<img class='center-block img-right' src='assets/images/gaga.gif'>", "<img class='center-block img-right' src='assets/images/simpsons.gif'>", "<img class='center-block img-right' src='assets/images/toothpick.gif'>", "<img class='center-block img-right' src='assets/images/myspace.gif'>", "<img class='center-block img-right' src='assets/images/lake.gif'>", "<img class='center-block img-right' src='assets/images/trump.gif'>", "<img class='center-block img-right' src='assets/images/berkeley.gif'>", "<img class='center-block img-right' src='assets/images/facebook.gif'>", "<img class='center-block img-right' src='assets/images/twitter.gif'>", "<img class='center-block img-right' src='assets/images/instagram.gif'>"];
+var wrongimageArray = ["<img class='center-block img-right' src='assets/images/wrong.gif'>", "<img class='center-block img-right' src='assets/images/wrong1.gif'>", "<img class='center-block img-right' src='assets/images/wrong0.gif'>", "<img class='center-block img-right' src='assets/images/wrong2.gif'>", "<img class='center-block img-right' src='assets/images/wrong3.gif'>", "<img class='center-block img-right' src='assets/images/wrong4.gif'>", "<img class='center-block img-right' src='assets/images/wrong5.gif'>", "<img class='center-block img-right' src='assets/images/wrong6.gif'>", "<img class='center-block img-right' src='assets/images/wrong8.gif'>"]
+var correctAnswers = ["C. Lady Gaga", "B. The Simpsons", "A. Toothpick", "C. 2003", "A. Lake Erie", "C. 45th", "D. 1868", "D. 2004", "D. 2006", "B. 2010"];
 var questionCounter = 0;
 var selecterAnswer;
 var theClock;
